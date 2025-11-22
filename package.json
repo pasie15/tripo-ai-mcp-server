@@ -28,7 +28,7 @@
     "axios": "^1.7.7",
     "dotenv": "^16.4.5",
     "zod": "^3.23.8",
-    "zod-to-json-schema": "^3.23.5"
+    "zod-to-json-schema": "^3.23.3"
   },
   "devDependencies": {
     "@types/node": "^22.9.0",

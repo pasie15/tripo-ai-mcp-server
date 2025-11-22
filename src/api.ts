@@ -8,9 +8,9 @@ export class TripoApi {
   private apiKey: string;
 
   constructor(apiKey?: string) {
-    this.apiKey = apiKey || process.env.TRIPO_API_KEY || '';
+    this.apiKey = apiKey || process.env.TRIPO_API_SECRET || '';
     if (!this.apiKey) {
-      console.warn('TRIPO_API_KEY is not set. API calls requiring authentication will fail.');
+      console.warn('TRIPO_API_SECRET is not set. API calls requiring authentication will fail.');
     }
 
     this.client = axios.create({

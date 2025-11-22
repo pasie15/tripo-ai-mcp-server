@@ -8,6 +8,7 @@ import {
   McpError,
 } from '@modelcontextprotocol/sdk/types.js';
 import { z } from 'zod';
+import { zodToJsonSchema } from 'zod-to-json-schema';
 import { TripoApi } from './api.js';
 import dotenv from 'dotenv';
 import path from 'path';
@@ -271,20 +272,6 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     };
   }
 });
-
-// Helper to convert Zod schema to JSON schema
-function zodToJsonSchema(schema: z.ZodType): any {
-  // Simple conversion or use zod-to-json-schema package if complexity increases
-  // For now, I'll rely on a basic implementation or just assume the SDK handles it?
-  // The MCP SDK usually expects a JSON Schema object.
-  // I should actually install zod-to-json-schema to be safe.
-  
-  // Actually, I can just write the schemas directly as JSON for now to save a dependency, 
-  // or use a simple converter.
-  // Let's grab `zod-to-json-schema`.
-  
-  return require('zod-to-json-schema').zodToJsonSchema(schema);
-}
 
 const transport = new StdioServerTransport();
 await server.connect(transport);

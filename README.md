@@ -19,7 +19,7 @@ npm install -g tripo-ai-mcp-server
 
 ## Configuration
 
-You need a Tripo3D API key. You can set it in a `.env` file or pass it as an environment variable `TRIPO_API_KEY`.
+You need a Tripo3D API secret. You can set it in a `.env` file or pass it as an environment variable `TRIPO_API_SECRET`.
 
 ## Client Configuration
 
@@ -37,7 +37,7 @@ Add the following to your `claude_desktop_config.json` (usually found at `%APPDA
         "tripo-ai-mcp-server"
       ],
       "env": {
-        "TRIPO_API_KEY": "your_api_key_here"
+        "TRIPO_API_SECRET": "your_api_secret_here"
       }
     }
   }
