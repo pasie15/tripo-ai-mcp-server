@@ -1,6 +1,6 @@
 {
   "name": "tripo-ai-mcp-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for Tripo3D AI API",
   "main": "dist/index.js",
   "bin": {
