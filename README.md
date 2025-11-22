@@ -21,6 +21,29 @@ npm install -g tripo-ai-mcp-server
 
 You need a Tripo3D API key. You can set it in a `.env` file or pass it as an environment variable `TRIPO_API_KEY`.
 
+## Client Configuration
+
+### Claude Desktop
+
+Add the following to your `claude_desktop_config.json` (usually found at `%APPDATA%\Claude\claude_desktop_config.json` on Windows or `~/Library/Application Support/Claude/claude_desktop_config.json` on macOS):
+
+```json
+{
+  "mcpServers": {
+    "tripo-ai": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "tripo-ai-mcp-server"
+      ],
+      "env": {
+        "TRIPO_API_KEY": "your_api_key_here"
+      }
+    }
+  }
+}
+```
+
 ## Usage
 
 Start the server:
