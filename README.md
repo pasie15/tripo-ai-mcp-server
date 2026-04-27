@@ -78,6 +78,21 @@ tripo-ai-mcp-server
 3. `npm run build`
 4. `node dist/index.js`
 
+## Publishing to npm
+
+A GitHub Actions workflow (`.github/workflows/publish.yml`) automatically publishes the package to npm whenever a new GitHub Release is created.
+
+**One-time setup:**
+
+1. Generate an npm **Automation** token at [npmjs.com](https://www.npmjs.com) → Avatar → Access Tokens → Generate New Token → Automation.
+2. Add it as a repository secret in GitHub: Settings → Secrets and variables → Actions → New repository secret → name it `NPM_TOKEN`.
+
+**To release a new version:**
+
+1. Bump `"version"` in `package.json`.
+2. Commit and push.
+3. Create a new GitHub Release (tag it with the version, e.g. `v1.1.0`). The workflow triggers automatically and publishes to npm.
+
 ## License
 
 ISC
