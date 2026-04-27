@@ -5,11 +5,15 @@ This is a Model Context Protocol (MCP) server for the [Tripo3D AI](https://www.t
 ## Features
 
 - **Text to 3D**: Generate 3D models from text prompts.
-- **Image to 3D**: Generate 3D models from images (supports local paths with auto-upload).
-- **Multiview to 3D**: Generate 3D models from multiple view images.
-- **Animation**: Animate rigged models.
-- **Stylization**: Apply styles to models.
-- **Task Status**: Check the status of generation tasks.
+- **Image to 3D**: Generate 3D models from images (supports local paths, URLs, or pre-uploaded tokens).
+- **Multiview to 3D**: Generate 3D models from multiple view images (local paths, URLs, or tokens).
+- **Refine Model**: Improve the quality of a draft model.
+- **Stylization**: Apply styles (lego, voxel, voronoi, minecraft) to a model.
+- **Texture Model**: Re-texture an existing model, optionally guided by a text or image prompt.
+- **Convert Model**: Export a model to a different format (GLTF, FBX, OBJ, STL, USDZ, 3MF).
+- **Animation workflow**: Check riggability → rig a model → retarget a preset animation.
+- **Task Status**: Check the status and retrieve output URLs of any generation task.
+- **Upload File**: Upload a local image file and receive a reusable file token.
 
 ## Installation
 
@@ -54,13 +58,18 @@ tripo-ai-mcp-server
 
 ### Tools
 
-- `text_to_3d`: Create a 3D model from text.
-- `image_to_3d`: Create a 3D model from an image.
-- `multiview_to_3d`: Create a 3D model from multiview images.
-- `get_task_status`: Check task status.
-- `upload_file`: Upload a file manually.
-- `animate_model`: Animate a model.
-- `stylize_model`: Stylize a model.
+- `text_to_3d`: Generate a 3D model from a text description.
+- `image_to_3d`: Generate a 3D model from an image (local path, URL, or pre-uploaded token).
+- `multiview_to_3d`: Generate a 3D model from multiple view images.
+- `get_task_status`: Check task status and retrieve output model URLs.
+- `upload_file`: Upload a local image file and receive a reusable file token.
+- `refine_model`: Refine a draft model to improve quality.
+- `animate_prerigcheck`: Check whether a model is suitable for rigging.
+- `rig_model`: Rig a model so it can be animated.
+- `retarget_animation`: Apply a preset animation to a rigged model.
+- `stylize_model`: Apply a visual style to a model (lego, voxel, voronoi, minecraft).
+- `convert_model`: Convert a model to a different file format (GLTF, FBX, OBJ, STL, USDZ, 3MF).
+- `texture_model`: Generate new textures for an existing model.
 
 ## Development
 

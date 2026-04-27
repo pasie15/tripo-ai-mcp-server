@@ -6,7 +6,7 @@ export interface TripoTask {
   output?: {
     model?: string;
     base_model?: string;
-    render_image?: string;
+    rendered_image?: string;
     pbr_model?: string;
     [key: string]: any;
   };
